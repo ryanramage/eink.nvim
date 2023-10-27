@@ -64,7 +64,7 @@ function M.get_groups(c)
 		Constant = { fg = c.base0, bg = c.light_blue }, -- String Character Number Boolean Float
 		String = { fg = c.base0, bg = c.light_green },
 		Identifier = { fg = c.base0 }, -- Function
-		Statement = { fg = c.base0, bg = c.light_orange }, -- Conditional Repeat Label Operator Keyword Exception
+		Statement = { fg = c.base0, bg = c.light_blue, bold = true }, -- Conditional Repeat Label Operator Keyword Exception
 		Operator = { link = "Identifier" },
 		PreProc = { link = "Question" }, -- Include Define Macro PreCondit
 		Type = { fg = c.pink }, -- StorageClass Structure Typedef

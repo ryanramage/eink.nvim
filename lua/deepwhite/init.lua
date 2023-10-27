@@ -7,7 +7,7 @@ end
 
 function M.load()
 	if vim.version().minor < 7 then
-		vim.notify_once("eink.nvim: you must use neovim 0.7 or higher")
+		vim.notify_once("deepwhite.nvim: you must use neovim 0.7 or higher")
 		return
 	end
 	vim.cmd([[hi clear]])
