@@ -1,4 +1,4 @@
-local config = require("deepwhite.config")
+local config = require("eink.config")
 local M = {}
 
 function M.setup(opts)
@@ -16,8 +16,8 @@ function M.load()
 	vim.o.background = "light"
 	vim.o.termguicolors = true
 
-	local colors = require("deepwhite.colors").get_colors(config.options)
-	local groups = require("deepwhite.scheme").get_groups(colors)
+	local colors = require("eink.colors").get_colors(config.options)
+	local groups = require("eink.scheme").get_groups(colors)
 
 	for name, val in pairs(groups) do
 		vim.api.nvim_set_hl(0, name, val)
