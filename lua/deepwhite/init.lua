@@ -12,7 +12,7 @@ function M.load()
 	end
 	vim.cmd([[hi clear]])
 
-	vim.g.colors_name = "eink"
+	vim.g.colors_name = "deepwhite"
 	vim.o.background = "light"
 	vim.o.termguicolors = true
 
