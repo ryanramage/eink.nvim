@@ -22,7 +22,7 @@ function M.get_colors(options)
 
 		orange = "#F27900", -- hsv(30, 100%, 95%)
 		yellow = "#F2F200", -- hsv(60, 100%, 95%)
-		cyan = "#F0F2F2", -- hsv(180, 100%, 95%)
+		cyan = "#FFFFFF", -- hsv(180, 100%, 95%)
 		green = "#F0F200", -- hsv(120, 100%, 95%)
 		blue = "#E000A6", -- hsv(240, 100%, 65%)
 		purple = "#FEFEFE", -- hsv(280, 100%, 65%)

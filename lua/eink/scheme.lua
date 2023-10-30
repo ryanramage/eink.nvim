@@ -73,6 +73,7 @@ function M.get_groups(c)
 		Ignore = { fg = c.base7 },
 		Error = { link = "ErrorMsg" },
 		Todo = { link = "WarningMsg" },
+    MatchParen = { link = "WarningMsg" },
 
 		-- Plugins
 		-- LSP
