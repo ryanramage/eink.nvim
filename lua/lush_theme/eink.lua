@@ -82,17 +82,19 @@ return lush(function()
 		Comment({ fg = s[6], gui = "italic" }), -- any comment
 		ColorColumn({ bg = s[6] }), -- used for the columns set with 'colorcolumn'
 		Conceal({}), -- placeholder characters substituted for concealed text (see 'conceallevel')
-		Cursor({ bg = hl1 }), -- character under the cursor
+		Cursor({  bg = hl2 }), -- character under the cursor
 		CursorI({ bg = hl1 }), -- insert cursor TODO make this based on other colors
 		CursorR({ bg = hl2 }), -- replace cursor
 		CursorO({ bg = hl3 }), -- operator-pending cursor
 		-- lCursor      { }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
 		-- CursorIM     { }, -- like Cursor, but used when in IME mode |CursorIM|
 		-- CursorColumn { }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
-		CursorLine({ bg = Normal.bg[offset_fn](5) }), -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
+		-- CursorLine({ bg = Normal.bg[offset_fn](13) }), -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
+		CursorLine({ fg = s.inv, bg = s.normal }), -- Visual mode selection
 		Directory({}), -- directory names (and other special names in listings)
 		DiffAdd({ fg = green }), -- diff mode: Added line |diff.txt|
 		DiffChange({ fg = yellow }), -- diff mode: Changed line |diff.txt|
+		NvimTreeSpecialFile({ fg = s[1], guifg = s[1]}),
 		DiffDelete({ fg = red }), -- diff mode: Deleted line |diff.txt|
 		DiffText({ fg = s.inv, bg = red }), -- diff mode: Changed text within a changed line |diff.txt|
 		EndOfBuffer({ fg = eob }), -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
@@ -108,7 +110,7 @@ return lush(function()
 		Substitute({}), -- |:substitute| replacement text highlighting
 		LineNr({ fg = s[1] }), -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 		CursorLineNr({ fg = s[1] }), -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
-		MatchParen({ fg = red, bg = shade(red, -78), gui = "bold,italic" }), -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+		MatchParen({ fg = s.inv, bg = hl3,  gui = "bold,italic" }), -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
 		ParenMatch({ MatchParen }),
 		ModeMsg({}), -- 'showmode' message (e.g., "-- INSERT -- ")
 		MsgArea({}), -- Area for messages and cmdline
