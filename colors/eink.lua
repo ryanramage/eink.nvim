@@ -1,4 +1,3 @@
-package.loaded["eink"] = nil
-package.loaded["eink.colors"] = nil
-package.loaded["eink.scheme"] = nil
-require("eink").load()
+let g:colors_name = 'monotone'
+
+lua require('lush')(require('lush_theme.eink'))
